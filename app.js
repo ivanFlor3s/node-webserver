@@ -23,7 +23,17 @@ app.get('/hola-mundo',(req,res)=>{
 })
 
 app.get('/generic',(req,res)=>{
-   res.sendFile(__dirname + '/public/generic.html')
+   res.render('generic',{
+      nombre: 'Ivan crack',
+      titulo: 'Curso Node'
+   })
+})
+
+app.get('/elements',(req,res)=>{
+   res.render('elements',{
+      nombre: 'Ivan crack',
+      titulo: 'Curso Node'
+   })
 })
 
 app.get('*',(req,res)=>{
