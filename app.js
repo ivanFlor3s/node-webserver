@@ -10,7 +10,10 @@ app.set('view engine','hbs')
 app.use(express.static('public'))
 
 app.get('/',(req,res)=>{
-   res.render("Home")
+   res.render("Home",{
+      nombre: 'Ivan crack',
+      titulo: 'Curso Node'
+   })
 })
 
 app.get('/hola-mundo',(req,res)=>{
